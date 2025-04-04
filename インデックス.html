@@ -65,7 +65,7 @@
     <body>
 
 	    
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar" role="navigation" aria-label="main navigation"　data-target="navbarMenu">
             <div class="navbar-brand">
                <a class="navbar-item" href="インデックス">
                     <img src="page-0001.jpg" alt="">
@@ -94,6 +94,17 @@
         </nav>
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navbarBurger = document.querySelector('.navbar-burger');
+    const navbarMenu = document.querySelector('#navbarMenu');
+
+    navbarBurger.addEventListener('click', () => {
+      navbarBurger.classList.toggle('is-active');
+      navbarMenu.classList.toggle('is-active');
+    });
+  });
+</script>
 
 <!-- モバイル向けナビゲーションの例 -->
 <div class="mobile-menu">
