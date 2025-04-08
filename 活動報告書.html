@@ -7,9 +7,69 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     </head>
     <body>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+       
+<style>
+	.menu-container {
+  margin: 0;
+}
+
+.menu-container .menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-container .menu .menu-item {
+  flex: 1;
+}
+
+.menu-container .menu .menu-item a {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-right: none;
+  color: #333;
+  display: block;
+  padding: 0.6em 0.4em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-container .menu .menu-item a:hover {
+  background: #ccc;
+  color: #ffffff;
+}
+
+.menu-container .menu .menu-item:last-child a {
+  border-right: 1px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-container .menu {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .menu-container .menu .menu-item {
+    flex: auto;
+    width: 33.33333333%;
+  }
+  .menu-container .menu .menu-item:nth-child(3n) a {
+    border-right: 1px solid #ccc;
+  }
+  .menu-container .menu .menu-item:nth-child(n + 4) a {
+    border-top: none;
+  }
+}
+</style>
+	    
+    </head>
+    <body>
+
+	    
+        <nav class="navbar" role="navigation" aria-label="main navigation"　data-target="navbarMenu">
             <div class="navbar-brand">
-                <a class="navbar-item" href="インデックス">
+               <a class="navbar-item" href="インデックス">
                     <img src="page-0001.jpg" alt="">
                     <!--   
                     <svg width="640" height="160" viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,21 +78,65 @@
                     </svg>
                     -->
                 </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <a class="navbar-item" href="https://www.appsheet.com/start/ea8318fe-4c2b-46d1-8d9b-5f713ad15bad">活動報告書提出サイト</a>
-                    <a class="navbar-item" href="インデックス.html">ホーム</a>
-                    <a class="navbar-item" href="活動報告書.html">活動報告書提出方法など</a>
-                    <a class="navbar-item" href="文体.html">文体連について</a>
-                    <a class="navbar-item" href="会議.html">会議について</a>
-                    <a class="navbar-item" href="お問い合わせ.html">お問い合わせ</a>
-                    <a class="navbar-item" href="kuop.html">KUOP</a>
+                    <a class="navbar-item"href="インデックス.html">ホーム</a>
                 </a>
             </div>
         </nav>
+
+
+
+
+
+
+	    
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="インデックス">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+    
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="https://www.appsheet.com/start/ea8318fe-4c2b-46d1-8d9b-5f713ad15bad">活動報告書提出サイト</a>
+                    <a class="navbar-item"href="インデックス.html">ホーム</a>
+                    <a class="navbar-item"href="活動報告書.html">活動報告書提出方法など</a>
+                    <a class="navbar-item"href="文体.html">文体連について</a>
+                    <a class="navbar-item"href="会議.html">会議について</a>
+                  
+                    <a class="navbar-item" href="お問い合わせ.html">お問い合わせ</a>
+                  <a class="navbar-item" href="インデックス.html">KUOP</a>
+    </div>
+    <div class="navbar-end">
+                  <a class="navbar-item" href="インデックス.html">せんべい</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navbarBurger = document.querySelector('.navbar-burger');
+    const navbarMenu = document.querySelector('#navbarMenu');
+
+    navbarBurger.addEventListener('click', () => {
+      navbarBurger.classList.toggle('is-active');
+      navbarMenu.classList.toggle('is-active');
+    });
+  });
+</script>
+
+
+
+
+
         <section class="hero is-success">
             <div class="hero-body">
                 <p class="title">活動報告書</p>
